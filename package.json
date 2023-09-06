@@ -6,8 +6,9 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "lint": "eslint . --ext .ts,.vue"
+    "postinstall": "nuxt prepare && husky install",
+    "lint": "eslint . --ext .js,.ts,.vue",
+    "format": "prettier --write './**/*.{js,jsx,vue,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
@@ -19,6 +20,7 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-prettier": "^5.0.0",
+    "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "nuxt": "^3.7.0",
     "postcss": "^8.4.29",
